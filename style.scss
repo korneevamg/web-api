@@ -23,6 +23,15 @@ $xxs: 0.8rem;
 $m: 1.4rem;
 $l: 5.0rem;
 
+/* Components */
+@mixin button {
+    background-color: $base-color;
+    color: $base-color-reverse;
+    padding: $xxs;
+    border-style: none;
+    min-height: 4rem;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -128,11 +137,7 @@ main {
                 width: 50%;
                 margin-left: $xxs;
                 margin-right: $xxs;
-                background-color: $base-color;
-                color: $base-color-reverse;
-                padding: $xxs;
-                border-style: none;
-                min-height: 4rem;
+                @include button()
             }
 
 
@@ -151,12 +156,39 @@ main {
 footer {
     background-color: $highlight-color;
     font-size: $small-text;
-    padding: $m;
     grid-row: 3;
+
+    .footer__social-media {
+        padding: $m;
+        border-top-style: dashed;
+        border-width: 0.4rem;
+        border-color: $highlight-color;
+        background-color: $base-color-reverse;
+        display: grid;
+        grid-template-columns: 70% 30%;
+
+        .footer__social-media--share-api {
+
+            grid-column: 1;
+
+            .footer__social-media--api {
+                margin: 0;
+            }
+        }
+
+        .footer__social-media--button {
+            text-align: right;
+
+            button {
+                @include button();
+            }
+        }
+    }
 
     .footer__right {
         text-align: right;
         margin: 0;
+        padding: $m;
     }
 }
 

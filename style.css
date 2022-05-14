@@ -13,6 +13,7 @@ h3 {
 }
 
 /* Empty space scheme */
+/* Components */
 * {
   box-sizing: border-box;
 }
@@ -126,12 +127,37 @@ main article .api-feature__button .inverted {
 footer {
   background-color: #BFBFBF;
   font-size: 0.8rem;
-  padding: 1.4rem;
   grid-row: 3;
+}
+footer .footer__social-media {
+  padding: 1.4rem;
+  border-top-style: dashed;
+  border-width: 0.4rem;
+  border-color: #BFBFBF;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+footer .footer__social-media .footer__social-media--share-api {
+  grid-column: 1;
+}
+footer .footer__social-media .footer__social-media--share-api .footer__social-media--api {
+  margin: 0;
+}
+footer .footer__social-media .footer__social-media--button {
+  text-align: right;
+}
+footer .footer__social-media .footer__social-media--button button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-style: none;
+  min-height: 4rem;
 }
 footer .footer__right {
   text-align: right;
   margin: 0;
+  padding: 1.4rem;
 }
 
 header,

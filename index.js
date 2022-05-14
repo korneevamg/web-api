@@ -45,17 +45,25 @@ function nonPersistentNotification() {
     }
 }
 
-function persistentNotification() {
-    if (!('Notification' in window) || !('ServiceWorkerRegistration' in window)) {
-        alert('Persistent Notification API not supported!');
-        return;
+/** Web Share API */
+//https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API
+if (!'navigator' in window || !navigator['share']) {
+    document.getElementsByClassName("footer__social-media")[0].style.display = "none";
+}
+
+// Share must be triggered by "user activation"
+async function share() {
+    const shareData = {
+        title: 'Web API Showcase',
+        text: 'Check out this Web API Showcase by @BrowserPerson',
+        url: 'https://web-api.browser-person.com'
     }
 
+    const shareResult = document.getElementById('shareResult');
     try {
-        navigator.serviceWorker.getRegistration()
-            .then((reg) => reg.showNotification("Hi there - persistent!"))
-            .catch((err) => alert('Service Worker registration error: ' + err));
+        await navigator.share(shareResult)
+        shareResult.textContent = 'Web API Showcase shared successfully'
     } catch (err) {
-        alert('Notification API error: ' + err);
+        shareResult.textContent = err
     }
-}
+};
