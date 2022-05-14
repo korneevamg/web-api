@@ -109,11 +109,11 @@ main article .api-feature__button .api-feature__button--cta {
   width: 50%;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
+  min-height: 4rem;
   background-color: black;
   color: white;
   padding: 0.8rem;
   border-style: none;
-  min-height: 4rem;
 }
 main article .api-feature__button .inverted {
   background-color: #BFBFBF;
@@ -129,35 +129,58 @@ footer {
   font-size: 0.8rem;
   grid-row: 3;
 }
-footer .footer__social-media {
-  padding: 1.4rem;
+footer .footer__social-media--sharing {
+  padding: 0.8rem 1.4rem;
   border-top-style: dashed;
   border-width: 0.4rem;
   border-color: #BFBFBF;
   background-color: white;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: auto 1fr;
 }
-footer .footer__social-media .footer__social-media--share-api {
-  grid-column: 1;
-}
-footer .footer__social-media .footer__social-media--share-api .footer__social-media--api {
-  margin: 0;
-}
-footer .footer__social-media .footer__social-media--button {
+footer .footer__social-media--sharing .footer__social-media--icons {
   text-align: right;
 }
-footer .footer__social-media .footer__social-media--button button {
+footer .footer__social-media--sharing .footer__social-media--icons a:last-child img {
+  margin-right: 0;
+}
+footer .footer__share-api {
+  padding: 0.8rem 1.4rem;
+  border-top-style: dashed;
+  border-width: 0.4rem;
+  border-color: #BFBFBF;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+footer .footer__share-api .footer__share-api--details h3 {
+  display: inline;
+}
+footer .footer__share-api .footer__share-api--button {
+  text-align: right;
+}
+footer .footer__share-api .footer__share-api--button button {
   background-color: black;
   color: white;
   padding: 0.8rem;
   border-style: none;
-  min-height: 4rem;
 }
-footer .footer__right {
+footer .footer__imprint {
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+footer .footer__imprint .footer__links {
+  grid-column: 1;
+}
+footer .footer__imprint .footer__right {
+  grid-column: 2;
   text-align: right;
   margin: 0;
-  padding: 1.4rem;
+}
+footer .footer--icon {
+  width: 2rem;
+  margin-right: 0.8rem;
 }
 
 header,

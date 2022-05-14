@@ -29,7 +29,6 @@ $l: 5.0rem;
     color: $base-color-reverse;
     padding: $xxs;
     border-style: none;
-    min-height: 4rem;
 }
 
 * {
@@ -137,6 +136,7 @@ main {
                 width: 50%;
                 margin-left: $xxs;
                 margin-right: $xxs;
+                min-height: 4rem;
                 @include button()
             }
 
@@ -158,37 +158,70 @@ footer {
     font-size: $small-text;
     grid-row: 3;
 
-    .footer__social-media {
-        padding: $m;
+
+    .footer__social-media--sharing {
+        padding: $xxs $m;
         border-top-style: dashed;
         border-width: 0.4rem;
         border-color: $highlight-color;
         background-color: $base-color-reverse;
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: auto 1fr;
 
-        .footer__social-media--share-api {
+        .footer__social-media--icons {
+            text-align: right;
 
-            grid-column: 1;
+            a:last-child img {
+                margin-right: 0;
+            }
+        }
+    }
 
-            .footer__social-media--api {
-                margin: 0;
+    .footer__share-api {
+        padding: $xxs $m;
+        border-top-style: dashed;
+        border-width: 0.4rem;
+        border-color: $highlight-color;
+        background-color: $base-color-reverse;
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        .footer__share-api--details {
+
+            h3 {
+                display: inline;
             }
         }
 
-        .footer__social-media--button {
+        .footer__share-api--button {
             text-align: right;
 
             button {
                 @include button();
             }
+
         }
     }
 
-    .footer__right {
-        text-align: right;
-        margin: 0;
+    .footer__imprint {
         padding: $m;
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        .footer__links {
+            grid-column: 1;
+        }
+
+        .footer__right {
+            grid-column: 2;
+            text-align: right;
+            margin: 0;
+        }
+    }
+
+    .footer--icon {
+        width: 2rem;
+        margin-right: $xxs;
     }
 }
 

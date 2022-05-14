@@ -48,7 +48,7 @@ function nonPersistentNotification() {
 /** Web Share API */
 //https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API
 if (!'navigator' in window || !navigator['share']) { //We can also test for support using navigator.canShare():
-    document.getElementsByClassName("footer__social-media")[0].style.display = "none";
+    document.getElementsByClassName("footer__share-api")[0].style.display = "none";
 }
 
 // Share must be triggered by "user activation"
@@ -67,3 +67,5 @@ async function share() {
         shareResult.textContent = err
     }
 };
+
+// Want to receive shared information? It is possible for installed apps with Web Share Target: https://web.dev/web-share-target/
