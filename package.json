@@ -1,0 +1,28 @@
+{
+  "name": "web-api",
+  "version": "1.0.0",
+  "description": "Web API Showcase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korneevamg/web-api.git"
+  },
+  "keywords": [
+    "web",
+    "html",
+    "js",
+    "api",
+    "frontend",
+    "browser"
+  ],
+  "author": "Maria Korneeva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/korneevamg/web-api/issues"
+  },
+  "homepage": "https://github.com/korneevamg/web-api#readme"
+}

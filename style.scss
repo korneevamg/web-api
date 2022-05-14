@@ -1,0 +1,79 @@
+/* Color scheme */
+$base-color: #BFBFBF;
+
+/* Font scheme */
+$small-text: 1.0rem;
+
+/* Empty space scheme */
+$xxs: 1.4rem;
+$xs: 5.0rem;
+
+* {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+}
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  /* Style the header */
+  header {
+    border: $base-color;
+    padding: $xxs;
+    vertical-align: middle;
+    border-bottom-style: dashed;
+    border-width: 0.4rem;
+    display: grid;
+    grid-template-columns: $xs auto;
+
+    img {
+        grid-column: 1;
+        width: $xs;
+        align-self: center;
+    }
+
+    h1 {
+        grid-column: 2;
+        padding-left: $xxs;
+        align-self: center;
+    }
+
+  }
+
+  main {
+    padding: $xxs;
+    flex-grow: 1;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: $base-color;
+    font-size: $small-text;
+    padding: $xxs;
+    grid-row: 3;
+
+    .footer--right{
+        text-align: right;
+    }
+  }
+
+  header, main, footer {
+    flex-shrink: 0;
+}
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
