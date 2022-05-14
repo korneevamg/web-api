@@ -1,79 +1,177 @@
 /* Color scheme */
-$base-color: #BFBFBF;
+$highlight-color: #BFBFBF;
+$base-color: black;
+$base-color-reverse: white;
 
 /* Font scheme */
-$small-text: 1.0rem;
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+$small-text: 0.8rem;
 
 /* Empty space scheme */
-$xxs: 1.4rem;
-$xs: 5.0rem;
+$xxs: 0.8rem;
+$m: 1.4rem;
+$l: 5.0rem;
 
 * {
     box-sizing: border-box;
-  }
+}
 
-  html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
-  
-  body {
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-  }
-  
-  /* Style the header */
-  header {
-    border: $base-color;
-    padding: $xxs;
+}
+
+/* Style the header */
+header {
+    border: $highlight-color;
+    padding: $m;
     vertical-align: middle;
     border-bottom-style: dashed;
     border-width: 0.4rem;
     display: grid;
-    grid-template-columns: $xs auto;
+    grid-template-columns: $l auto;
 
     img {
         grid-column: 1;
-        width: $xs;
+        width: $l;
         align-self: center;
     }
 
     h1 {
         grid-column: 2;
-        padding-left: $xxs;
+        padding-left: $m;
         align-self: center;
     }
 
-  }
+}
 
-  main {
-    padding: $xxs;
+main {
+    padding: $m;
     flex-grow: 1;
-  }
-  
-  /* Style the footer */
-  footer {
-    background-color: $base-color;
+
+    article {
+        border-color: $base-color;
+        border-width: 0.1rem;
+        border-style: solid;
+        background-color: $highlight-color;
+
+        .api-feature__title {
+            margin: 0;
+            padding: $xxs;
+            border-color: $base-color;
+            border-width: 0.1rem;
+            border-bottom-style: solid;
+            display: grid;
+            grid-template-columns: auto 15%;
+            background-color: $base-color-reverse;
+
+            h3 {
+                margin: 0;
+                display: inline-block;
+                grid-column: 1;
+            }
+
+            .api-feature__title--dots {
+                grid-column: 2;
+                text-align: right;
+            }
+
+            .dot {
+                height: 0.5rem;
+                width: 0.5rem;
+                background-color: $base-color;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
+
+        .api-feature__details {
+            font-size: $small-text;
+            padding: $xxs;
+        }
+
+        .api-feature__button {
+            padding: $xxs;
+
+            .api-feature__button--info {
+                margin-top: 0;
+                font-size: $small-text;
+            }
+
+            .api-feature__button-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .api-feature__button--cta {
+                width: 50%;
+                margin-left: $xxs;
+                margin-right: $xxs;
+                background-color: $base-color;
+                color: $base-color-reverse;
+                padding: $xxs;
+                border-style: none;
+                min-height: 4rem;
+            }
+
+
+            .inverted {
+                background-color: $highlight-color;
+                color: $base-color-reverse;
+                border-style: solid;
+                border-color: $base-color-reverse;
+                border-width: 0.1rem;
+            }
+        }
+    }
+}
+
+/* Style the footer */
+footer {
+    background-color: $highlight-color;
     font-size: $small-text;
-    padding: $xxs;
+    padding: $m;
     grid-row: 3;
 
-    .footer--right{
+    .footer__right {
         text-align: right;
+        margin: 0;
     }
-  }
+}
 
-  header, main, footer {
+header,
+main,
+footer {
     flex-shrink: 0;
 }
-  
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+
+    nav,
+    article {
+        width: 100%;
+        height: auto;
     }
-  }
+}
