@@ -47,7 +47,7 @@ function nonPersistentNotification() {
 
 /** Web Share API */
 //https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API
-if (!'navigator' in window || !navigator['share']) {
+if (!'navigator' in window || !navigator['share']) { //We can also test for support using navigator.canShare():
     document.getElementsByClassName("footer__social-media")[0].style.display = "none";
 }
 
