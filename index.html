@@ -115,6 +115,34 @@
             </div>
 
         </article>
+        <article id="page-visibility" class="api-feature">
+            <div class="api-feature__title">
+                <h3>Page Visibility</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">The Page Visibility API provides events you can watch for to know when
+                a document becomes visible or hidden, as well as features to look at the current visibility state of the
+                page.
+                Note: The Page Visibility API is especially useful for saving resources and improving performance by
+                letting a page avoid performing unnecessary tasks when the document isn't visible.
+                When the user minimizes the window or switches to another tab, the API sends a visibilitychange event to
+                let listeners know the state of the page has changed. You can detect the event and perform some actions
+                or behave differently. For example, if your web app is playing a video, it can pause the video when the
+                user puts the tab into the background, and resume playback when the user returns to the tab. The user
+                doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new
+                foreground tab, and the user doesn't miss any of the video in the meantime.</details>
+            <div class="api-feature__button">
+                <iframe id="videoElement" width="100%"
+                    src="https://www.youtube.com/embed/wIe_kGGo3iM?enablejsapi=1&version=3&playerapiid=ytplayer"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </article>
     </main>
 
     <footer>

@@ -53,6 +53,7 @@ image1.src = "https://www.w3.org/Icons/w3c_main.png";
 
 /** Resource Timing API*/
 // https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
+// Gimme more! https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API
 function calculateLoadTimes() {
 
     var o = document.getElementById("performance-output");
@@ -140,3 +141,40 @@ new Promise(resolve => {
         resolve(list.getEntries().filter(entry => !entry.hadRecentInput));
     }).observe({ type: "layout-shift", buffered: true });
 }).then((result) => o.innerHTML = 'Cumulative Layout Shift of ' + result[0].value + ' at ' + result[0].startTime);
+
+/**
+ * Page Visibility
+ */
+// Set the name of the hidden property and the change event for visibility
+var hidden, visibilityChange;
+if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+    hidden = "hidden";
+    visibilityChange = "visibilitychange";
+} else if (typeof document.msHidden !== "undefined") {
+    hidden = "msHidden";
+    visibilityChange = "msvisibilitychange";
+} else if (typeof document.webkitHidden !== "undefined") {
+    hidden = "webkitHidden";
+    visibilityChange = "webkitvisibilitychange";
+}
+
+var videoElement = document.getElementById("videoElement");
+
+// If the page is hidden, pause the video;
+function handleVisibilityChange() {
+    if (document[hidden]) {
+        // https://developers.google.com/youtube/iframe_api_reference
+        videoElement.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
+    } else {
+        videoElement.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }
+}
+
+// Warn if the browser doesn't support addEventListener or the Page Visibility API
+if (typeof document.addEventListener === "undefined" || hidden === undefined) {
+    console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+} else {
+    // Handle page visibility change
+    document.addEventListener(visibilityChange, handleVisibilityChange, false);
+}
