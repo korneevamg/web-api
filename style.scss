@@ -76,6 +76,9 @@ header {
 main {
     padding: $m;
     flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     article {
         border-color: $base-color;
@@ -83,6 +86,7 @@ main {
         border-style: solid;
         background-color: $highlight-color;
         margin-bottom: $m;
+        width: 25rem;
 
         .api-feature__title {
             margin: 0;
