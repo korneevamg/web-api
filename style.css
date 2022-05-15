@@ -62,6 +62,7 @@ main article {
   border-width: 0.1rem;
   border-style: solid;
   background-color: #BFBFBF;
+  margin-bottom: 1.4rem;
 }
 main article .api-feature__title {
   margin: 0;

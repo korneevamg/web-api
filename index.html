@@ -30,7 +30,8 @@
     </header>
 
     <main>
-        <article class="api-feature">
+        <!--DESKTOP-->
+        <article id="local-notifications" class="api-feature">
             <div class="api-feature__title">
                 <h3>Local Notifications</h3>
                 <div class="api-feature__title--dots">
@@ -66,6 +67,30 @@
             </div>
 
         </article>
+        <article id="performance" class="api-feature">
+            <div class="api-feature__title">
+                <h3>Resource Timing</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">The Resource Timing API provides a way to retrieve and analyze
+                detailed network timing data regarding the loading of an application's resource(s). An application can
+                use the timing metrics to determine, for example, the length of time it takes to fetch a specific
+                resource such as an XMLHttpRequest, SVG, image, script, etc.).</details>
+            <div class="api-feature__button">
+                <div class="api-feature__button--info">
+                    <output></output>
+                </div>
+                <div class="api-feature__button-wrapper">
+                    <button class="api-feature__button--cta" onclick="calculateLoadTimes()"><strong>Test
+                            Resource Timing</strong></button>
+                </div>
+            </div>
+
+        </article>
     </main>
 
     <footer>
@@ -76,12 +101,12 @@
                 <!--Social sharing without JS
                     More details: https://browserperson.medium.com/how-to-implement-social-sharing-buttons-81d2ef5cbee1-->
                 <a class="fb-xfbml-parse-ignore" target="_blank"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https://web-api.browser-person.com"><img
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://korneevamg.github.io/web-api/"><img
                         class="footer--icon" src="./social-icons/facebook.svg" /></a>
-                <a href=”https://www.linkedin.com/shareArticle?mini=true&url=https://web-api.browser-person.com"
+                <a href=”https://www.linkedin.com/shareArticle?mini=true&url=https://korneevamg.github.io/web-api/"
                     target=”_blank”><img class="footer--icon" src="./social-icons/linkedin.svg" /></a>
                 <a class=”share-button” target=”_blank”
-                    href=”https://twitter.com/intent/tweet?url=https://web-api.browser-person.com"><img
+                    href=”https://twitter.com/intent/tweet?url=https://korneevamg.github.io/web-api/"><img
                         class="footer--icon" src="./social-icons/twitter.svg" /></a>
             </div>
         </div>

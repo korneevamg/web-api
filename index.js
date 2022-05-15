@@ -11,6 +11,8 @@ if ('Notification' in window) {
         document.getElementById("requestLocalNotificationPermission").classList.toggle("inverted");
         document.getElementById("testLocalNotification").classList.toggle("inverted");
     }
+} else {
+    document.getElementById("local-notifications").style.display = "none";
 }
 
 // Won't work local in Safari: https://stackoverflow.com/questions/42019261/notifications-disabled-on-file-system-in-safari
@@ -42,6 +44,67 @@ function nonPersistentNotification() {
         var notification = new Notification("Hi there - non-persistent!");
     } catch (err) {
         alert('Notification API error: ' + err);
+    }
+}
+
+// load some image to trigger "resource" fetch events
+var image1 = new Image();
+image1.src = "https://www.w3.org/Icons/w3c_main.png";
+
+/** Resource Timing API*/
+// https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
+function calculateLoadTimes() {
+
+    var o = document.getElementsByTagName("output")[0];
+    o.innerHTML = '';
+
+    // Check performance support
+    if (performance === undefined) {
+        document.getElementById("performance").style.display = "none";
+        return;
+    }
+
+    // Get a list of "resource" performance entries
+    var resources = performance.getEntriesByType("resource");
+    if (resources === undefined || resources.length <= 0) {
+        console.log("= Calculate Load Times: there are NO `resource` performance records");
+        return;
+    }
+
+    for (var i = 0; i < resources.length; i++) {
+        o.innerHTML += "Calculating loading time for " + resources[i].name + " <br><br>";
+
+        // Redirect time
+        var t = resources[i].redirectEnd - resources[i].redirectStart;
+        o.innerHTML += "... Redirect time = " + t + " <br>";
+
+        // DNS time
+        t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
+        o.innerHTML += "... DNS lookup time = " + t + " <br>";
+
+        // TCP handshake time
+        t = resources[i].connectEnd - resources[i].connectStart;
+        o.innerHTML += "... TCP time = " + t + " <br>";
+
+        // Secure connection time
+        t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+        o.innerHTML += "... Secure connection time = " + t + " <br>";
+
+        // Response time
+        t = resources[i].responseEnd - resources[i].responseStart;
+        o.innerHTML += "... Response time = " + t + " <br>";
+
+        // Fetch until response end
+        t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+        o.innerHTML += "... Fetch until response end time = " + t + " <br>";
+
+        // Request start until response end
+        t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+        o.innerHTML += "... Request start until response end time = " + t + " <br>";
+
+        // Start until response end
+        t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+        o.innerHTML += "... Start until response end time = " + t + " <br><br>";
     }
 }
 

@@ -82,6 +82,7 @@ main {
         border-width: 0.1rem;
         border-style: solid;
         background-color: $highlight-color;
+        margin-bottom: $m;
 
         .api-feature__title {
             margin: 0;
