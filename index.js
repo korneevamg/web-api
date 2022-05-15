@@ -55,7 +55,7 @@ image1.src = "https://www.w3.org/Icons/w3c_main.png";
 // https://developer.mozilla.org/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 function calculateLoadTimes() {
 
-    var o = document.getElementsByTagName("output")[0];
+    var o = document.getElementById("performance-output");
     o.innerHTML = '';
 
     // Check performance support
@@ -129,6 +129,14 @@ async function share() {
     } catch (err) {
         shareResult.textContent = err
     }
-};
+};// Want to receive shared information? It is possible for installed apps with Web Share Target: https://web.dev/web-share-target/
 
-// Want to receive shared information? It is possible for installed apps with Web Share Target: https://web.dev/web-share-target/
+var o = document.getElementById("layout-shift-output");
+o.innerHTML = '';
+// Safari does not support 'getEntries'
+// https://web.dev/fixing-layout-instability/
+new Promise(resolve => {
+    new PerformanceObserver(list => {
+        resolve(list.getEntries().filter(entry => !entry.hadRecentInput));
+    }).observe({ type: "layout-shift", buffered: true });
+}).then((result) => o.innerHTML = 'Cumulative Layout Shift of ' + result[0].value + ' at ' + result[0].startTime);

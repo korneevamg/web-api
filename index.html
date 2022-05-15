@@ -82,11 +82,35 @@
                 resource such as an XMLHttpRequest, SVG, image, script, etc.).</details>
             <div class="api-feature__button">
                 <div class="api-feature__button--info">
-                    <output></output>
+                    <output id="performance-output"></output>
                 </div>
                 <div class="api-feature__button-wrapper">
                     <button class="api-feature__button--cta" onclick="calculateLoadTimes()"><strong>Test
                             Resource Timing</strong></button>
+                </div>
+            </div>
+
+        </article>
+        <article id="layout-shift" class="api-feature">
+            <div class="api-feature__title">
+                <h3>Layout Instability</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">A layout shift happens when any element that is visible in the
+                viewport changes its start position between two frames. These elements are described as being unstable,
+                and contribute to a poor Cumulative Layout Shift (CLS) score, indicating a lack of visual stability.
+
+                The Layout Instability API provides a way to measure and report on these layout shifts. All tools for
+                debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe
+                and debug layout shifts by logging the information to the console, to send the data to a server
+                endpoint, or to Google Analytics.</details>
+            <div class="api-feature__button">
+                <div class="api-feature__button--info">
+                    <output id="layout-shift-output"></output>
                 </div>
             </div>
 
