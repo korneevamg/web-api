@@ -147,54 +147,80 @@
                 </div>
             </div>
         </article>
+        <article id="page-visibility" class="api-feature">
+            <div class="api-feature__title">
+                <h3>PointerEvent.pressure</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">The pressure read-only property of the PointerEvent interface
+                indicates the normalized pressure of the pointer input.
+
+                The normalized pressure of the pointer input in the range of 0 to 1, inclusive, where 0 and 1 represent
+                the minimum and maximum pressure the hardware is capable of detecting, respectively. For hardware that
+                does not support pressure, such as a mouse, the value is 0.5 when the pointer is active buttons state
+                and 0 otherwise.
+                <a href="https://patrickhlauke.github.io/touch/" target="_blank">More info</a>
+            </details>
+            <div class="api-feature__button">
+                <div class="api-feature__button--info"> <output id="pointer-pressure"></output></div>
+                <div class="api-feature__button-wrapper">
+                    <button id="pressure-button" class="api-feature__button--cta""><strong>Measure Pointer
+                            Pressure</strong></button>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer>
 
-        <div class="footer__social-media--sharing">
-            <p id="shareResult" class="footer__social-media--question">Like what you see?</p>
-            <div class="footer__social-media--icons">
-                <!--Social sharing without JS
+        <div class=" footer__social-media--sharing">
+                        <p id="shareResult" class="footer__social-media--question">Like what you see?</p>
+                        <div class="footer__social-media--icons">
+                            <!--Social sharing without JS
                     More details: https://browserperson.medium.com/how-to-implement-social-sharing-buttons-81d2ef5cbee1-->
-                <a class="fb-xfbml-parse-ignore" target="_blank"
-                    href='https://www.facebook.com/sharer/sharer.php?u=https://korneevamg.github.io/web-api/'><img
-                        class="footer--icon" src="./social-icons/facebook.svg" /></a>
-                <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://korneevamg.github.io/web-api/'
-                    target=”_blank”><img class="footer--icon" src="./social-icons/linkedin.svg" /></a>
-                <a class=”share-button” target=”_blank”
-                    href='https://twitter.com/intent/tweet?url=https://korneevamg.github.io/web-api/'><img
-                        class="footer--icon" src="./social-icons/twitter.svg" /></a>
-            </div>
-        </div>
-        <div class="footer__share-api">
-            <div class="footer__share-api--details">
-                <h3>Web Share API</h3>
-            </div>
-            <div class="footer__share-api--button">
-                <button onclick="share()"><strong>Click to share</strong></button>
-            </div>
-            <details class="api-feature__details">If you want to add a share button, but want to avoid any
-                unnecessary JS, a leaner way to do it is with the Web Share API. It’s reasonably well-supported
-                in
-                mobile browsers but doesn’t yet have widespread desktop support.
-                We can use the navigator.share() method to share a URL or files, such as images, videos or PDFs.
-            </details>
-        </div>
-        <div class="footer__imprint">
-            <div class="footer__links">
-                <a href='https://browserperson.medium.com/' target=”_blank”><img class="footer--icon"
-                        src="./social-icons/medium.svg" /></a>
-                <a href='https://www.linkedin.com/in/maria-korneeva/' target=”_blank”><img class="footer--icon"
-                        src="./social-icons/linkedin.svg" /></a>
-                <a href='https://twitter.com/BrowserPerson' target=”_blank”><img class="footer--icon"
-                        src="./social-icons/twitter.svg" /></a>
-            </div>
+                            <a class="fb-xfbml-parse-ignore" target="_blank"
+                                href='https://www.facebook.com/sharer/sharer.php?u=https://korneevamg.github.io/web-api/'><img
+                                    class="footer--icon" src="./social-icons/facebook.svg" /></a>
+                            <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://korneevamg.github.io/web-api/'
+                                target=”_blank”><img class="footer--icon" src="./social-icons/linkedin.svg" /></a>
+                            <a class=”share-button” target=”_blank”
+                                href='https://twitter.com/intent/tweet?url=https://korneevamg.github.io/web-api/'><img
+                                    class="footer--icon" src="./social-icons/twitter.svg" /></a>
+                        </div>
+                </div>
+                <div class="footer__share-api">
+                    <div class="footer__share-api--details">
+                        <h3>Web Share API</h3>
+                    </div>
+                    <div class="footer__share-api--button">
+                        <button onclick="share()"><strong>Click to share</strong></button>
+                    </div>
+                    <details class="api-feature__details">If you want to add a share button, but want to avoid any
+                        unnecessary JS, a leaner way to do it is with the Web Share API. It’s reasonably well-supported
+                        in
+                        mobile browsers but doesn’t yet have widespread desktop support.
+                        We can use the navigator.share() method to share a URL or files, such as images, videos or PDFs.
+                    </details>
+                </div>
+                <div class="footer__imprint">
+                    <div class="footer__links">
+                        <a href='https://browserperson.medium.com/' target=”_blank”><img class="footer--icon"
+                                src="./social-icons/medium.svg" /></a>
+                        <a href='https://www.linkedin.com/in/maria-korneeva/' target=”_blank”><img class="footer--icon"
+                                src="./social-icons/linkedin.svg" /></a>
+                        <a href='https://twitter.com/BrowserPerson' target=”_blank”><img class="footer--icon"
+                                src="./social-icons/twitter.svg" /></a>
+                    </div>
 
-            <p class="footer__right">Created by <a href="https://twitter.com/BrowserPerson"
-                    target="_blank">@BrowserPerson</a><br />Licensed under MIT</p>
-        </div>
-    </footer>
-    <script src="index.js"></script>
+                    <p class="footer__right">Created by <a href="https://twitter.com/BrowserPerson"
+                            target="_blank">@BrowserPerson</a><br />Licensed under MIT</p>
+                </div>
+                </footer>
+                <script src="index.js"></script>
 </body>
 
 </html>
