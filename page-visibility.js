@@ -7,7 +7,6 @@ var visibilityChangeEnabled = false;
 var visibilityToggle = document.getElementById("page-visibility-button");
 
 function toggleVisibilityChange() {
-    console.log(visibilityChangeEnabled);
     visibilityChangeEnabled = !visibilityChangeEnabled;
     if (visibilityChangeEnabled) {
         visibilityToggle.innerHTML = '<strong>Disable Page Visibility</strong>';

@@ -157,6 +157,15 @@ main {
     }
 }
 
+#canvas {
+    display: none;
+}
+
+#photo {
+    width: 370px;
+    height: 277.5px;
+}
+
 /* Style the footer */
 footer {
     background-color: $highlight-color;

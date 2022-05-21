@@ -148,7 +148,7 @@
                 </div>
             </div>
         </article>
-        <article id="page-visibility" class="api-feature">
+        <article class="api-feature">
             <div class="api-feature__title">
                 <h3>PointerEvent.pressure</h3>
                 <div class="api-feature__title--dots">
@@ -174,55 +174,96 @@
                 </div>
             </div>
         </article>
+        <article class=" api-feature">
+                        <div class="api-feature__title">
+                            <h3>Media Capture and Streams API</h3>
+                            <div class="api-feature__title--dots">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <details class="api-feature__details">The Media Capture and Streams API, often called the Media
+                            Streams API or MediaStream API, is an API related to WebRTC which provides support for
+                            streaming audio and video data.
+
+                            It provides the interfaces and methods for working with the streams and their constituent
+                            tracks, the constraints associated with data formats, the success and error callbacks when
+                            using the data asynchronously, and the events that are fired during the process.
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"
+                                target="_blank">More info</a>
+                        </details>
+                        <div class="api-feature__button">
+                            <div class="camera">
+                                <video id="video">Video stream not available.</video>
+                            </div>
+                            <canvas id="canvas">
+                            </canvas>
+                            <div class="output">
+                                <img id="photo" alt="The screen capture will appear in this box.">
+                            </div>
+                            <div class="api-feature__button--info"> <output id="pointer-pressure"></output></div>
+                            <div class=" api-feature__button-wrapper">
+                                <button class="api-feature__button--cta" onclick="startup()"><strong>Start
+                                        stream</strong></button>
+                                <button id="startbutton" class="api-feature__button--cta "><strong>Take
+                                        photo</strong></button>
+                            </div>
+                        </div>
+        </article>
     </main>
 
     <footer>
 
         <div class=" footer__social-media--sharing">
-                        <p id="shareResult" class="footer__social-media--question">Like what you see?</p>
-                        <div class="footer__social-media--icons">
-                            <!--Social sharing without JS
+            <p id="shareResult" class="footer__social-media--question">Like what you see?</p>
+            <div class="footer__social-media--icons">
+                <!--Social sharing without JS
                     More details: https://browserperson.medium.com/how-to-implement-social-sharing-buttons-81d2ef5cbee1-->
-                            <a class="fb-xfbml-parse-ignore" target="_blank"
-                                href='https://www.facebook.com/sharer/sharer.php?u=https://korneevamg.github.io/web-api/'><img
-                                    class="footer--icon" src="./social-icons/facebook.svg" /></a>
-                            <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://korneevamg.github.io/web-api/'
-                                target=”_blank”><img class="footer--icon" src="./social-icons/linkedin.svg" /></a>
-                            <a class=”share-button” target=”_blank”
-                                href='https://twitter.com/intent/tweet?url=https://korneevamg.github.io/web-api/'><img
-                                    class="footer--icon" src="./social-icons/twitter.svg" /></a>
-                        </div>
-                </div>
-                <div class="footer__share-api">
-                    <div class="footer__share-api--details">
-                        <h3>Web Share API</h3>
-                    </div>
-                    <div class="footer__share-api--button">
-                        <button onclick="share()"><strong>Click to share</strong></button>
-                    </div>
-                    <details class="api-feature__details">If you want to add a share button, but want to avoid any
-                        unnecessary JS, a leaner way to do it is with the Web Share API. It’s reasonably well-supported
-                        in
-                        mobile browsers but doesn’t yet have widespread desktop support.
-                        We can use the navigator.share() method to share a URL or files, such as images, videos or PDFs.
-                    </details>
-                </div>
-                <div class="footer__imprint">
-                    <div class="footer__links">
-                        <a href='https://browserperson.medium.com/' target=”_blank”><img class="footer--icon"
-                                src="./social-icons/medium.svg" /></a>
-                        <a href='https://www.linkedin.com/in/maria-korneeva/' target=”_blank”><img class="footer--icon"
-                                src="./social-icons/linkedin.svg" /></a>
-                        <a href='https://twitter.com/BrowserPerson' target=”_blank”><img class="footer--icon"
-                                src="./social-icons/twitter.svg" /></a>
-                    </div>
+                <a class="fb-xfbml-parse-ignore" target="_blank"
+                    href='https://www.facebook.com/sharer/sharer.php?u=https://korneevamg.github.io/web-api/'><img
+                        class="footer--icon" src="./social-icons/facebook.svg" /></a>
+                <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://korneevamg.github.io/web-api/'
+                    target=”_blank”><img class="footer--icon" src="./social-icons/linkedin.svg" /></a>
+                <a class=”share-button” target=”_blank”
+                    href='https://twitter.com/intent/tweet?url=https://korneevamg.github.io/web-api/'><img
+                        class="footer--icon" src="./social-icons/twitter.svg" /></a>
+            </div>
+        </div>
+        <div class="footer__share-api">
+            <div class="footer__share-api--details">
+                <h3>Web Share API</h3>
+            </div>
+            <div class="footer__share-api--button">
+                <button onclick="share()"><strong>Click to share</strong></button>
+            </div>
+            <details class="api-feature__details">If you want to add a share button, but want to
+                avoid any
+                unnecessary JS, a leaner way to do it is with the Web Share API. It’s reasonably
+                well-supported
+                in
+                mobile browsers but doesn’t yet have widespread desktop support.
+                We can use the navigator.share() method to share a URL or files, such as images,
+                videos or PDFs.
+            </details>
+        </div>
+        <div class="footer__imprint">
+            <div class="footer__links">
+                <a href='https://browserperson.medium.com/' target=”_blank”><img class="footer--icon"
+                        src="./social-icons/medium.svg" /></a>
+                <a href='https://www.linkedin.com/in/maria-korneeva/' target=”_blank”><img class="footer--icon"
+                        src="./social-icons/linkedin.svg" /></a>
+                <a href='https://twitter.com/BrowserPerson' target=”_blank”><img class="footer--icon"
+                        src="./social-icons/twitter.svg" /></a>
+            </div>
 
-                    <p class="footer__right">Created by <a href="https://twitter.com/BrowserPerson"
-                            target="_blank">@BrowserPerson</a><br />Licensed under MIT</p>
-                </div>
-                </footer>
-                <script src="index.js"></script>
-                <script src="page-visibility.js"></script>
+            <p class="footer__right">Created by <a href="https://twitter.com/BrowserPerson"
+                    target="_blank">@BrowserPerson</a><br />Licensed under MIT</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="page-visibility.js"></script>
+    <script src="capturing-photo.js"></script>
 </body>
 
 </html>

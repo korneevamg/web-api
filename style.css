@@ -128,6 +128,15 @@ main article .api-feature__button .inverted {
   border-width: 0.1rem;
 }
 
+#canvas {
+  display: none;
+}
+
+#photo {
+  width: 370px;
+  height: 277.5px;
+}
+
 /* Style the footer */
 footer {
   background-color: #BFBFBF;
