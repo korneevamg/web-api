@@ -137,6 +137,31 @@ main article .api-feature__button .inverted {
   height: 277.5px;
 }
 
+::-webkit-file-upload-button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-style: none;
+}
+
+::-ms-browse {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-style: none;
+}
+
+::file-selector-button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-style: none;
+}
+
+input {
+  margin-bottom: 0.8rem;
+}
+
 /* Style the footer */
 footer {
   background-color: #BFBFBF;

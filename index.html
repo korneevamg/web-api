@@ -211,6 +211,31 @@
                             </div>
                         </div>
         </article>
+        <article class=" api-feature">
+            <div class="api-feature__title">
+                <h3>Input</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="api-feature__button">
+                <input placeholder="Upload file" id="file-upload" type="file" accept="image/*,video/*" /><br>
+                <input placeholder="Enter your search key" type="search"><br>
+                <input placeholder="Pick a color" type="color"><br>
+                <input placeholder="Choose time" type="datetime-local"><br>
+                <input placeholder="Enter something" autocapitalize="words" enterkeyhint="done" type="text"><br>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Google Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist><br>
+            </div>
+        </article>
     </main>
 
     <footer>
@@ -262,8 +287,8 @@
         </div>
     </footer>
     <script src="index.js"></script>
-    <script src="page-visibility.js"></script>
-    <script src="capturing-photo.js"></script>
+    <script src="./scripts/page-visibility.js"></script>
+    <script src="./scripts/capturing-photo.js"></script>
 </body>
 
 </html>
