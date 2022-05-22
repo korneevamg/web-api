@@ -236,6 +236,29 @@
                 </datalist><br>
             </div>
         </article>
+        <article class=" api-feature">
+            <div class="api-feature__title">
+                <h3>designMode</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">document.designMode controls whether the entire document is editable.
+                Valid values are "on" and "off". According to the specification, this property is meant to default to
+                "off". Firefox follows this standard. The earlier versions of Chrome and IE default to "inherit".
+                Starting in Chrome 43, the default is "off" and "inherit" is no longer supported. In IE6-10, the value
+                is capitalized.
+            </details>
+            <div class="api-feature__button">
+                <div class=" api-feature__button-wrapper">
+                    <button id="design-mode" class="api-feature__button--cta"
+                        onclick="toggleDesignMode()"><strong>Enable
+                            DesignMode</strong></button>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer>
@@ -289,6 +312,7 @@
     <script src="index.js"></script>
     <script src="./scripts/page-visibility.js"></script>
     <script src="./scripts/capturing-photo.js"></script>
+    <script src="./scripts/designMode.js"></script>
 </body>
 
 </html>
