@@ -30,7 +30,109 @@
     </header>
 
     <main>
-        <!--DESKTOP-->
+        <article class="api-feature">
+            <div class="api-feature__title">
+                <h3>No JS needed!</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">
+                <summary>Details about details</summary>
+                The &lt;details&gt; HTML element creates a disclosure widget in which information is visible only when
+                the
+                widget is toggled into an "open" state. A summary or label must be provided using the <summary>
+                    element.
+            </details>
+            <p class="api-feature__button">Regensburg is a city in eastern Bavaria, at the confluence of the Danube,
+                Naab and Regen rivers. It is
+                capital of the Upper Palatinate subregion of the state in the south of Germany. With more than 150,000
+                inhabitants, Regensburg is <mark>the fourth-largest city in the State of Bavaria</mark> after Munich,
+                Nuremberg and
+                Augsburg. From its foundation as an imperial Roman river fort, the city has been the political, economic
+                and cultural centre of the surrounding region; it is still known in the Romance languages by a
+                <del>cognate
+                    of its</del><ins>having the same linguistic derivation as another</ins> Latin name of "Ratisbona"
+                (the version "Ratisbon" was long current in English). Later,
+                under the
+                rule of the Holy Roman Empire, it housed the Perpetual Diet of Regensburg.
+            </p>
+        </article>
+        <article class="api-feature">
+            <div class="api-feature__title">
+                <h3>Input</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="api-feature__button">
+                <input placeholder="Upload file" id="file-upload" type="file" accept="image/*,video/*" /><br>
+                <input placeholder="Enter your search key" type="search"><br>
+                <input placeholder="Pick a color" type="color"><br>
+                <input placeholder="Choose time" type="datetime-local"><br>
+                <input placeholder="Enter something" autocapitalize="words" enterkeyhint="done" type="text"><br>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Google Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist><br>
+            </div>
+        </article>
+        <article class="api-feature">
+            <div class="api-feature__title">
+                <h3>designMode</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">document.designMode controls whether the entire document is editable.
+                Valid values are "on" and "off". According to the specification, this property is meant to default to
+                "off". Firefox follows this standard. The earlier versions of Chrome and IE default to "inherit".
+                Starting in Chrome 43, the default is "off" and "inherit" is no longer supported. In IE6-10, the value
+                is capitalized.
+            </details>
+            <div class="api-feature__button">
+                <div class=" api-feature__button-wrapper">
+                    <button id="design-mode" class="api-feature__button--cta"
+                        onclick="toggleDesignMode()"><strong>Enable
+                            DesignMode</strong></button>
+                </div>
+            </div>
+        </article>
+        <article class="api-feature">
+            <div class="api-feature__title">
+                <h3>Geolocation API</h3>
+                <div class="api-feature__title--dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <details class="api-feature__details">
+                <summary>Details about details</summary>
+                The &lt;details&gt; HTML element creates a disclosure widget in which information is visible only when
+                the
+                widget is toggled into an "open" state. A summary or label must be provided using the <summary>
+                    element.
+            </details>
+            <div class="api-feature__button">
+                <div class="api-feature__button-wrapper">
+                    <p id="status"></p>
+                    <a id="map-link" target="_blank"></a>
+                    <button id="location-button" onclick="geoFindMe()" class="api-feature__button--cta "><strong>Show my
+                            location</strong></button>
+                </div>
+            </div>
+        </article>
         <article id="local-notifications" class="api-feature">
             <div class="api-feature__title">
                 <h3>Local Notifications</h3>
@@ -211,84 +313,6 @@
                             </div>
                         </div>
         </article>
-        <article class=" api-feature">
-            <div class="api-feature__title">
-                <h3>Input</h3>
-                <div class="api-feature__title--dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-            <div class="api-feature__button">
-                <input placeholder="Upload file" id="file-upload" type="file" accept="image/*,video/*" /><br>
-                <input placeholder="Enter your search key" type="search"><br>
-                <input placeholder="Pick a color" type="color"><br>
-                <input placeholder="Choose time" type="datetime-local"><br>
-                <input placeholder="Enter something" autocapitalize="words" enterkeyhint="done" type="text"><br>
-                <input list="browsers">
-                <datalist id="browsers">
-                    <option value="Internet Explorer">
-                    <option value="Firefox">
-                    <option value="Google Chrome">
-                    <option value="Opera">
-                    <option value="Safari">
-                </datalist><br>
-            </div>
-        </article>
-        <article class=" api-feature">
-            <div class="api-feature__title">
-                <h3>designMode</h3>
-                <div class="api-feature__title--dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-            <details class="api-feature__details">document.designMode controls whether the entire document is editable.
-                Valid values are "on" and "off". According to the specification, this property is meant to default to
-                "off". Firefox follows this standard. The earlier versions of Chrome and IE default to "inherit".
-                Starting in Chrome 43, the default is "off" and "inherit" is no longer supported. In IE6-10, the value
-                is capitalized.
-            </details>
-            <div class="api-feature__button">
-                <div class=" api-feature__button-wrapper">
-                    <button id="design-mode" class="api-feature__button--cta"
-                        onclick="toggleDesignMode()"><strong>Enable
-                            DesignMode</strong></button>
-                </div>
-            </div>
-        </article>
-        <article class=" api-feature">
-            <div class="api-feature__title">
-                <h3>No JS needed!</h3>
-                <div class="api-feature__title--dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-            <details class="api-feature__details">
-                <summary>Details about details</summary>
-                The &lt;details&gt; HTML element creates a disclosure widget in which information is visible only when
-                the
-                widget is toggled into an "open" state. A summary or label must be provided using the <summary>
-                    element.
-            </details>
-            <p class="api-feature__button">Regensburg is a city in eastern Bavaria, at the confluence of the Danube,
-                Naab and Regen rivers. It is
-                capital of the Upper Palatinate subregion of the state in the south of Germany. With more than 150,000
-                inhabitants, Regensburg is <mark>the fourth-largest city in the State of Bavaria</mark> after Munich,
-                Nuremberg and
-                Augsburg. From its foundation as an imperial Roman river fort, the city has been the political, economic
-                and cultural centre of the surrounding region; it is still known in the Romance languages by a
-                <del>cognate
-                    of its</del><ins>having the same linguistic derivation as another</ins> Latin name of "Ratisbona"
-                (the version "Ratisbon" was long current in English). Later,
-                under the
-                rule of the Holy Roman Empire, it housed the Perpetual Diet of Regensburg.
-            </p>
-        </article>
     </main>
 
     <footer>
@@ -343,6 +367,7 @@
     <script src="./scripts/page-visibility.js"></script>
     <script src="./scripts/capturing-photo.js"></script>
     <script src="./scripts/designMode.js"></script>
+    <script src="./scripts/geolocation.js"></script>
 </body>
 
 </html>
