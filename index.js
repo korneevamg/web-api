@@ -145,18 +145,10 @@ new Promise(resolve => {
 /**
  * PointerEvent.pressure
  */
-// Set the name of the hidden property and the change event for visibility
 var pointerOutput = document.getElementById("pointer-pressure");
 var buttonToMeasure = document.getElementById("pressure-button");
 buttonToMeasure.addEventListener('pointerdown', function (e) {
-    /*     pointerOutput.innerHTML = 'Applied pressure: ' + event.pressure + '<br><br>';
-        // Check to see if the event has a force property
-        if ("webkitForce" in event) {
-            // Retrieve the force level
-            var forceLevel = event["webkitForce"];
-            pointerOutput.innerHTML += 'webkitForce: ' + forceLevel + '<br><br>';
-            // Check for force level within the range of a force click
-        } */
+    pointerOutput.innerHTML = '';
     if ((typeof (e.targetTouches) != 'undefined') && (e.targetTouches.length > 0) && (typeof (e.targetTouches[0].force) != 'undefined')) {
         pointerOutput.innerHTML += 'force: ' + e.targetTouches[0].force + ' ';
     } if (typeof (e.webkitForce) != 'undefined') {
