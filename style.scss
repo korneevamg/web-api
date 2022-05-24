@@ -197,7 +197,7 @@ footer {
         border-color: $highlight-color;
         background-color: $base-color-reverse;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 50% 50%;
 
         .footer__social-media--icons {
             text-align: right;

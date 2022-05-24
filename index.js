@@ -125,7 +125,7 @@ async function share() {
 
     const shareResult = document.getElementById('shareResult');
     try {
-        await navigator.share(shareResult)
+        await navigator.share(shareData)
         shareResult.textContent = 'Web API Showcase shared successfully'
     } catch (err) {
         shareResult.textContent = err

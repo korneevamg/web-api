@@ -175,7 +175,7 @@ footer .footer__social-media--sharing {
   border-color: #BFBFBF;
   background-color: white;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 50% 50%;
 }
 footer .footer__social-media--sharing .footer__social-media--icons {
   text-align: right;
