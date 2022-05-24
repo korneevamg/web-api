@@ -4,7 +4,6 @@
 // calculated based on the aspect ratio of the input stream.
 let parent = document.getElementById('photo-capture');
 let computedStyle = getComputedStyle(parent);
-console.log(computedStyle);
 var width = parent.clientWidth - 2 * parseFloat(computedStyle.paddingLeft);  // We will scale the photo width to this
 var height = 0;     // This will be computed based on the input stream
 

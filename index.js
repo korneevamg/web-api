@@ -2,14 +2,15 @@
  * Local Notifications
  */
 
-var $status = document.getElementById('status');
+var $status = document.getElementById('notification-status');
 
 if ('Notification' in window) {
     $status.innerText = Notification.permission;
     if (Notification.permission === "granted") {
+        $status.innerText = 'granted';
         document.getElementById("requestPermissionInfo").style.visibility = "hidden";
         document.getElementById("requestLocalNotificationPermission").classList.toggle("inverted");
-        document.getElementById("testLocalNotification").classList.toggle("inverted");
+        document.getElementById("testLocalNotification").classList.toggle("inverted")
     }
 } else {
     document.getElementById("local-notifications").style.display = "none";
